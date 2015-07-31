@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 	desc.add_options()
 		("help,h", "display this message")
 		("daemon,d", "run as daemon")
-		("config,c", po::value<std::string>()->default_value("/etc/hpoller.conf"), "config file location")
+		("config,c", po::value<std::string>()->default_value("/etc/hpoller.json"), "config file location")
 		("pid,p", po::value<std::string>()->default_value("/var/run/hpoller.pid"), "pid file location")
 	;
 	po::variables_map vm;
