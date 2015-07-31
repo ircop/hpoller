@@ -7,18 +7,18 @@ hpoller
 
 Требования:
 
-gcc 4.5.4+
-oracle instant client
-boost
-net-snmp
+- gcc 4.5.4+
+- oracle instant client
+- boost
+- net-snmp
 
 Установка:
 
-git clone https://github.com/ircop/hpoller.git
-cd hpoller
-mkdir build && cd build
-cmake ..
-make
+- git clone https://github.com/ircop/hpoller.git
+- cd hpoller
+- mkdir build && cd build
+- cmake ..
+- make
 
 cp ../config.json /etc/hpoller.json
 cp hpoller /usr/bin/hpoller
