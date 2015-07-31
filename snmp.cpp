@@ -284,14 +284,14 @@ std::string Snmp::parseValue( const oid *objid, size_t objidlen, const netsnmp_v
 		case ASN_UNSIGNED64:
 		case ASN_TIMETICKS:
 		case ASN_GAUGE:
-			ret = std::to_string( (unsigned int) ( * variable->val.integer &  0xffffffff )  );
+			ret = std::to_string( (long long unsigned int) ( * variable->val.integer &  0xffffffff )  );
 			break;
 		case ASN_COUNTER64:
-			ret = std::to_string( (((uint64_t)variable->val.counter64[0].high) << 32) +  (uint64_t)variable->val.counter64[0].low );
+			ret = std::to_string( (long long unsigned int) (((uint64_t)variable->val.counter64[0].high) << 32) +  (uint64_t)variable->val.counter64[0].low );
 			break;
 		case ASN_INTEGER:
 		case ASN_INTEGER64:
-			ret = std::to_string( (long int)variable->val.integer );
+			ret = std::to_string( (long long unsigned int) variable->val.integer );
 			break;
 		case ASN_DOUBLE:
 			stream << * variable->val.doubleVal;
@@ -302,10 +302,10 @@ std::string Snmp::parseValue( const oid *objid, size_t objidlen, const netsnmp_v
 			ret = stream.str();
 			break;
 		case ASN_IPADDRESS:
-			ret = std::to_string((unsigned int)variable->val.string[0]) + "."
-					+ std::to_string((unsigned int)variable->val.string[1]) + "."
-					+ std::to_string((unsigned int)variable->val.string[2]) + "."
-					+ std::to_string((unsigned int)variable->val.string[3]);
+			ret = std::to_string((long long unsigned int) variable->val.string[0]) + "."
+					+ std::to_string((long long unsigned int)variable->val.string[1]) + "."
+					+ std::to_string((long long unsigned int)variable->val.string[2]) + "."
+					+ std::to_string((long long unsigned int)variable->val.string[3]);
 			break;
 		default:
 			this->Log->error("UNSUPPORTED VALUE TYPE!");

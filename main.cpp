@@ -130,9 +130,9 @@ int main(int argc, char *argv[])
 	walkResult res;
 	SNMP->walk( "IF-MIB::ifHCInOctets", "10.10.10.42", "public", 1, 28, res );
 	for( std::map<long, std::string>::iterator it = res.begin(); it!=res.end(); ++it ) {
-		std::string idx = std::to_string(it->first);
+		std::string idx = std::to_string((long long unsigned int)it->first);
 		std::string value = it->second;
-		//std::string send_str = "switch." + std::string("10.10.10.42") + std::string(".inOctets.") + idx + " " + value + " " + std::to_string(t) + "\n";
+		//std::string send_str = "switch." + std::string("10.10.10.42") + std::string(".inOctets.") + idx + " " + value + " " + std::to_string((long long unsigned int)t) + "\n";
 		std::string send_str = idx + ":" + value;
 		
 			Log->debug("%s", send_str.c_str());
@@ -294,7 +294,7 @@ void processSwitch( std::string modelName, std::string ipaddr, ptree models, Col
 		std::string code = v.second.get<std::string>("code");
 		std::string oid = v.second.get<std::string>("oid");
 		std::string value = SNMP->get(oid, ipaddr, community);
-		std::string str = "switch." + ipcode + "." + code + " " + value + " " + std::to_string(t) + "\n";
+		std::string str = "switch." + ipcode + "." + code + " " + value + " " + std::to_string((long long unsigned int)t) + "\n";
 		
 		Send += str;
 	}
@@ -310,9 +310,9 @@ void processSwitch( std::string modelName, std::string ipaddr, ptree models, Col
 		SNMP->walk( oid, ipaddr, community, minIdx, maxIdx, res );
 		t = std::time(0);
 		for( std::map<long, std::string>::iterator it = res.begin(); it!=res.end(); ++it ) {
-			std::string idx = std::to_string(it->first);
+			std::string idx = std::to_string((long long unsigned int)it->first);
 			std::string value = it->second;
-			std::string send_str = "switch." + ipcode + "." + code + "." + idx + " " + value + " " + std::to_string(t) + "\n";
+			std::string send_str = "switch." + ipcode + "." + code + "." + idx + " " + value + " " + std::to_string((long long unsigned int)t) + "\n";
 			Send += send_str;
 		}
 	}
