@@ -369,7 +369,7 @@
     ],
     "switch_root_id": 201,
     "workers": 30,
-    "logfile": "/var/log/snmpoller/snmpoller.log",
+    "logfile": "/var/log/hpoller.log",
     "debug": true,
     "snmp_timeout_ms": 2000,
     "loop_interval": 300
