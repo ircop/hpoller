@@ -17,7 +17,7 @@ typedef struct {
 
 class DB {
 	public:
-		DB(std::string Login, std::string Pw, std::string Db, Logger *log);
+		DB(std::string Login, std::string Pw, std::string Db, Logger *log, unsigned long root);
 		~DB();
 		
 		bool connect();
@@ -30,6 +30,7 @@ class DB {
 		Environment *env;
 		Logger *Log;
 		std::string login, password, db;
+		unsigned long switchRoot;
 };
 
 #endif

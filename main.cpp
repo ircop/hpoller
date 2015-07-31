@@ -100,6 +100,7 @@ int main(int argc, char *argv[])
 	// Соединение с БД гидры (и другие параметры)
 	int snmp_timeout_ms;
 	std::string db_login, db_pw, db_name;
+	unsigned long switchRoot = 0;
 	try {
 		db_login = config.get<std::string>("db.login");
 		db_pw = config.get<std::string>("db.password");
@@ -107,6 +108,7 @@ int main(int argc, char *argv[])
 		snmp_timeout_ms = config.get<int>("snmp_timeout_ms");
 		workers = config.get<int>("workers");
 		loopInterval = config.get<int>("loop_interval");
+		switchRoot = config.get<unsigned long>("switch_root_id");
 	} catch (std::exception& error) {
 		Log->error("Config error: %s", error.what());
 		fprintf(stderr, "Config error: %s", error.what());
@@ -118,7 +120,7 @@ int main(int argc, char *argv[])
 		exit(6);
 	}
 	
-	db = new DB( db_login, db_pw, db_name, Log );
+	db = new DB( db_login, db_pw, db_name, Log, switchRoot );
 	SNMP = new Snmp(Log, snmp_timeout_ms);
 	int oids = SNMP->parseOids( config );
 	Log->info("Parsed %i unique oids from config.", oids);

@@ -30,6 +30,7 @@ bool checkConfig( boost::property_tree::ptree config )
 	}
 	
 	try {
+		config.get<unsigned long>("switch_root_id");
 		config.get<std::string>("logfile");
 		config.get<bool>("debug");
 	} catch (std::exception& error) {

@@ -367,6 +367,7 @@
 	    {"host":"127.0.0.1", "port": 2303},
 	    {"host":"127.0.0.1", "port": 2403}
     ],
+    "switch_root_id": 201,
     "workers": 30,
     "logfile": "/var/log/snmpoller/snmpoller.log",
     "debug": true,
