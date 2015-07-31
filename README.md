@@ -11,8 +11,8 @@ hpoller
 
 - gcc 4.5.4+
 - oracle instant client
-- boost
-- net-snmp
+- boost (dev)
+- net-snmp (dev)
 
 Установка:
 

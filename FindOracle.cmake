@@ -41,6 +41,7 @@ if(DEFINED ENV{ORACLE_HOME})
   set(ORACLE_OCCI_NAMES libocci occi oraocci10 oraocci11)
 
   set(ORACLE_LIB_DIR 
+    ${ORACLE_HOME}
     ${ORACLE_HOME}/lib
     ${ORACLE_HOME}/sdk/lib       # Oracle SDK
     ${ORACLE_HOME}/sdk/lib/msvc
