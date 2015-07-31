@@ -1,0 +1,375 @@
+{
+    "db":
+    {
+	"login": "AIS_RPC",
+	"password": "3kj5y669yuj7rkedt[f",
+	"db": "1.2.3.4/dbname"
+    },
+    "models":
+    {
+	"DES-1228/ME":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 28,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3200-26":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 26,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3200-26_rev_C1":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 26,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3200-28":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 28,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3200-28_rev_C1":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 28,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3200-28F":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 28,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3200-28F_rev_C1":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 28,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3028":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 28,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3052":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 52,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3052P":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 52,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3200-52rev_C1":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 52,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3028G":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 28,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3028P":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 28,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DGS-3100-24TG":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 24,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DGS-3120-24SC":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 24,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DGS-3120-24TC":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 24,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DGS-3120-10":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 10,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DGS-3420-26SC":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 26,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DGS-3120-28SC":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 28,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DGS-3627G":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 27,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DXS-3326GSR":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 24,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	},
+	"DES-3526":
+	{
+	    "minIdx": 1,
+	    "maxIdx": 26,
+	    "community": "public",
+	    "oids_walk":
+	    [
+		{"code":"outOctets", "oid":"IF-MIB::ifHCOutOctets"},
+		{"code":"inOctets", "oid":"IF-MIB::ifHCInOctets"},
+		{"code":"crc", "oid":"1.3.6.1.2.1.10.7.2.1.3"},
+		{"code":"broadcast", "oid":".1.3.6.1.2.1.31.1.1.1.9"}
+	    ],
+	    "oids_get":
+	    [
+	    ]
+	}
+    },
+    "collectors":
+    [
+	    {"host":"127.0.0.1", "port": 2103},
+	    {"host":"127.0.0.1", "port": 2203},
+	    {"host":"127.0.0.1", "port": 2303},
+	    {"host":"127.0.0.1", "port": 2403}
+    ],
+    "workers": 30,
+    "logfile": "/var/log/snmpoller/snmpoller.log",
+    "debug": true,
+    "snmp_timeout_ms": 2000,
+    "loop_interval": 300
+}
