@@ -8,10 +8,11 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include "logger.h"
 
 using namespace boost::property_tree;
 
-boost::property_tree::ptree readConf();
+boost::property_tree::ptree readConf( std::string path );
 bool checkConfig( boost::property_tree::ptree config );
 
 #endif

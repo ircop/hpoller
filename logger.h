@@ -17,7 +17,7 @@
 
 class Logger {
 	public:
-		Logger( std::string filename );
+		Logger( std::string filename, bool dmn );
 		~Logger();
 		
 		//void write(std::string line);
@@ -27,6 +27,7 @@ class Logger {
 		void disableDebug();
 		
 		bool debugging;
+		bool daemon;
 		
 	private:
 		FILE *mFile;

@@ -8,10 +8,13 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <mutex>
+#include <unistd.h>
 
 #include <boost/thread.hpp>		// for threads
-#include <occi.h>							// for oracle
+#include <boost/program_options.hpp>	// for cmdargs
+#include <occi.h>			// for oracle
 
+namespace po = boost::program_options;
 boost::property_tree::ptree config;
 void processSwitch( std::string modelName, std::string ipaddr, ptree models, Collector c );
 
@@ -36,14 +39,60 @@ DB *db;
 Snmp *SNMP;
 int loopInterval;
 
-int main()
+int main(int argc, char *argv[])
 {
+	po::options_description desc("Available options");
+	desc.add_options()
+		("help,h", "display this message")
+		("daemon,d", "run as daemon")
+		("config,c", po::value<std::string>()->default_value("/etc/hpoller.conf"), "config file location")
+		("pid,p", po::value<std::string>()->default_value("/var/run/hpoller.pid"), "pid file location")
+	;
+	po::variables_map vm;
+	po::store(po::parse_command_line(argc, argv, desc), vm);
+	po::notify(vm);
+	
+	if( vm.count("help") ) {
+		std::cout << desc << std::endl;
+		exit(0);
+	}
+	
 	// Читаем конфиг
-	config = readConf();
+	config = readConf( vm["config"].as<std::string>().c_str() );
+	
+	// Daemonizing
+	bool dmn = false;
+	if( vm.count("daemon") ) {
+		dmn = true;
+		int mpid = fork();
+		if( mpid < 0 ) {
+		    fprintf(stderr, "Fork failed!\n");
+		    exit(-1);
+		}
+		
+		if( mpid > 0 ) {
+		    exit(-1);	// parent exit
+		}
+		
+		int pid1 = getpid();
+		umask(0);
+		int sid = setsid();
+		if( sid < 0 ) {
+		    fprintf(stderr, "setsid() failed!\n");
+		    exit(-1);
+		}
+		
+		pid_t pid = getpid();
+		FILE *fp = fopen( vm["pid"].as<std::string>().c_str(), "w");
+		if( fp ) {
+			fprintf(fp, "%d\n", pid);
+			fclose(fp);
+		}
+	}
 	
 	// Инициализируем лог
 	std::string logfile = config.get<std::string>("logfile");
-	Log = new Logger( logfile );
+	Log = new Logger( logfile, dmn );
 	Log->info("%s", "Starting program");
 	if( !config.get<bool>("debug") )
 		Log->disableDebug();

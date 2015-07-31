@@ -1,8 +1,12 @@
 #include "config.h"
 
-boost::property_tree::ptree readConf()
+boost::property_tree::ptree readConf( std::string path )
 {
-	std::ifstream ifs("config.json");
+	std::ifstream ifs(path.c_str());
+	if( !ifs ) {
+	    fprintf(stderr, "Can't open config file '%s'!\n", path.c_str() );
+	    exit(-2);
+	}
 	boost::property_tree::ptree pt;
 	boost::property_tree::read_json(ifs, pt);
 	

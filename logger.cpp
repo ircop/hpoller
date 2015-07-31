@@ -1,7 +1,8 @@
 #include "logger.h"
 
-Logger::Logger( std::string filename )
+Logger::Logger( std::string filename, bool dmn )
 {
+	this->daemon = dmn;
 	this->debugging = true;
 	this->mFile = fopen(filename.c_str(), "a");
 	if( this->mFile == NULL ) {
@@ -18,7 +19,7 @@ void Logger::write(const char *line, std::string color)
 	fwrite( str.c_str(), sizeof(char), str.size(), this->mFile );
 	fflush(this->mFile);
 	
-	if( this->debugging ) {
+	if( this->debugging && !this->daemon ) {
 		printf("%s", str.c_str() );
 	}
 }

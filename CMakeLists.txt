@@ -22,7 +22,7 @@ include_directories(${ORACLE_INCLUDE_DIR})
 
 set(SOURCES "main.cpp" "config.cpp" "db.cpp" "logger.cpp" "snmp.cpp")
 add_executable(hpoller ${SOURCES})
-target_link_libraries(hpoller -locci -lclntsh -lnetsnmp -lboost_thread ${ORACLE_LIBRARY})
+target_link_libraries(hpoller -locci -lclntsh -lnetsnmp -lboost_thread ${ORACLE_LIBRARY} ${Boost_LIBRARIES})
 
 #include_directories(${ORACLE_INCLUDE_DIR} ${Boost_INCLUDE_DIRS} ${LIBCONFIG_INCLUDE_DIR} ${LIBOPING_INCLUDE_DIR})
 #
