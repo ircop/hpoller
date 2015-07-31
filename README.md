@@ -22,7 +22,7 @@ hpoller
 - cmake ..
 - make
 
-cp ../config.json /etc/hpoller.json
-cp hpoller /usr/bin/hpoller
-hpoller
+- cp ../config.json /etc/hpoller.json
+- cp hpoller /usr/bin/hpoller
+- hpoller
 
