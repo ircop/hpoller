@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 		}
 		
 		if( mpid > 0 ) {
-		    exit(-1);	// parent exit
+		    exit(0);	// parent exit
 		}
 		
 		int pid1 = getpid();
