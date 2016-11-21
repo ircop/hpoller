@@ -8,7 +8,8 @@ set(hpoller_VERSION_MINOR 1)
 
 set(BOOST_COMPONENTS
 	thread
-	program_options)
+	program_options
+	system)
 
 include(FindOracle.cmake)
 include(FindNetSnmp.cmake)
