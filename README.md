@@ -1,5 +1,6 @@
 # hpoller
-hpoller
+
+# Актуальная версия теперь тут: https://github.com/ircop/go-hpoller
 
 Демон для сбора snmp-счетчиков устройств, хранящихся в БД билинга "Гидра" (oracle).
 
